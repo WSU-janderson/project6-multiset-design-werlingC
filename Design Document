@@ -1,0 +1,2 @@
+# 1. Introduction
+  My design implements a player inventory using a HashTable<string, size_t>

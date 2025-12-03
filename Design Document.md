@@ -11,13 +11,18 @@ The client for this class would be a game that uses an inventory system that all
 # 3. Core Operations
   ## 1. Display Inventory
   > Displays all items in the inventory in a set grid size
+
   > Its expected time complexity is O(n^2) As it will first need to retrieve all keys in the hash table, which will take O(n) time. Then it will have to use those keys to get each element the tables, which will again take O(n) time.
+
   > Possible edge cases include when there are no items in the inventory, and when there are zero of a certain item (which could be good or bad depending exactly how you want to do the inventory system).
+
   > The Hashtable is good for displaying the operation as it's order can be changed easily, where was with a tree or sequence, the order of the items is linked, and in order to change that order, you would need to use another data structure to temporarily store them in and reorder them. The part that holds the Hashtable back is that it is slower to retrieve all items since it need to first retrieve all the keys, where a tree and sequence would be able to do the same operation in O(n) time.
 
   ## 2. Search for item
   > Searches the inventory for a given item, and returns whether or not the item was found, and how many are in the inventory if it was found
+
   > The expected time complexity is O(n) since it only needs to retrieve the one key
+
   > Possible edge cases include the item not being found, or there being zero of an item, or multiple entries with the same item
   
   

@@ -67,6 +67,14 @@ The methods and datafields with a '+' before them signifies that they are public
 - **lastUsed(): list<string>**- This method should be private as it is used to help track of recently used items, and would only be called by whatever method signifies and item being used.
 
 ### Public members
+- **displayInventory(): void**- This needs to be public so that the inventory can be displayed to the user. It wouldn't change any data, so there is no way that it could be misused.
+- **searchForItem(string: searchItem): Boolean**- This method needs to be public so values can be found in the hashtable with risk of modifying the table
+- **sortInventory(enum: sortCriteria): void**- This method needs to be public so that a sort filter type can be passed in so that the function knows how to sort the table. While the table would be changed by this function, it would be in a controlled and consistent manner.
+- **incrementItem(int: valueToAdd): Boolean**- This method is the public way of adding or subtracting values from a key-value pair. This method has a series of checks to make sure the amount being added or removed does not 'break' the rules set in place, or cause other unintended side effects. This method would also allow for table etntries to be deleted automatically when their amount is set to 0.
+- **addItem(string: key, unsigned int: value): Boolean**- This method is public because it serves as a supervised way of adding new values to the table.
+- **lootAll(HashTable<string, unsigned int>: container): Boolean**- This method should be public because it is way of combining and scanning two tables and accesses the data in a safe way.
+
+
 
 # Citations
 [1] https://en.cppreference.com/w/cpp/algorithm/sort.html
